@@ -12,7 +12,7 @@ use Redis;
 use Storable qw/nfreeze thaw/;
 use Try::Tiny;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 __PACKAGE__->mk_classdata(qw/_session_redis_storage/);
 
@@ -137,10 +137,8 @@ database.
 
 =item B<Expired Sessions>
 
-This store does B<not> automatically expire sessions.  You can call
-C<delete_expired_sessions> to clear any expired sessions.  All sessions will
-then be checked, one at a time.  If a session has expired then it will be
-deleted.
+This store does B<not> automatically expires sessions.  There is no need to
+call C<delete_expired_sessions> to clear any expired sessions.
 
 =back
 
