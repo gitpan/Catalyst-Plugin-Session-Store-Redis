@@ -1,5 +1,5 @@
 ---
-abstract: 'The great new Catalyst::Plugin::Session::Store::Redis!'
+abstract: 'Redis Session store for Catalyst'
 author:
   - 'Cory G Watson <gphat@cpan.org>'
 build_requires:
@@ -24,4 +24,4 @@ requires:
   Try::Tiny: 0.02
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.02
+version: 0.03
