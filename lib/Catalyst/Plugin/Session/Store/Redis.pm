@@ -12,7 +12,7 @@ use Redis;
 use Storable qw/nfreeze thaw/;
 use Try::Tiny;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 __PACKAGE__->mk_classdata(qw/_session_redis_storage/);
 
@@ -79,8 +79,6 @@ sub setup_session {
     my ($c) = @_;
 
     $c->maybe::next::method(@_);
-
-    $c->_verify_redis_connection;
 }
 
 sub _verify_redis_connection {
